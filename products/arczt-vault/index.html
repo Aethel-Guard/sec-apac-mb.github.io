@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCZT Personal Vault — SEC-APAC-MB Docs</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+<nav class="topnav">
+    <a href="/" class="brand"><span class="brand-mark">🛡️</span><span class="brand-text">SEC-APAC-MB</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown"><a href="/products" class="nav-parent">Products ▾</a>
+        <div class="nav-dropdown-menu"><a href="/products/vigilar">🔥 Vigilar</a><a href="/products/arczt-vault">🔑 ARCZT Vault</a><a href="/products/ember-core">🪵 Ember Core</a></div></div>
+      <div class="nav-dropdown"><a href="/services" class="nav-parent">Services ▾</a>
+        <div class="nav-dropdown-menu"><a href="/services/assessment">📋 Security Assessment</a><a href="/services/monitoring">📡 Threat Monitoring</a><a href="/services/incident-response">🚨 Incident Response</a><a href="/services/audit">🔍 Compliance Audit</a></div></div>
+      <a href="/docs">Docs</a><a href="/about">About</a><a href="https://github.com/SEC-APAC-MB" class="nav-github">GitHub ↗</a>
+    </div>
+  </nav>
+  
+
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <h3>ARCZT Vault</h3>
+      <a href="/products/arczt-vault" class="active">Overview</a>
+      <a href="/docs/arczt-vault/features">Features</a>
+      <a href="/docs/arczt-vault/security">Security Model</a>
+      <a href="/docs/arczt-vault/install">Installation</a>
+      <a href="/docs/arczt-vault/vigilar-link">Vigilar Integration</a>
+      <a href="/docs/arczt-vault/faq">FAQ</a>
+      <h3>Other Products</h3>
+      <a href="/products/vigilar">Vigilar</a>
+      <a href="/products/ember-core">Ember Core</a>
+    </aside>
+
+    <main class="docs-content">
+      <span class="product-badge badge-arczt">🔑 ARCZT</span>
+      <h1>ARCZT Personal Vault</h1>
+      <p class="lead">Zero-knowledge, quantum-resistant credential management. Your safe never leaves your device.</p>
+
+      <h2>What is ARCZT?</h2>
+      <p>
+        ARCZT Personal Vault is a standalone credential manager. It stores your passwords,
+        API keys, and sensitive entries in an encrypted safe that lives only on your device.
+        No cloud sync, no server, no account required.
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">🔐 Zero-knowledge</div>
+        Your safe is encrypted with keys derived from your master password. ARCZT cannot
+        decrypt your data — we don't have your key and we don't want it.
+      </div>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Encrypted Safe</strong> — AES-256-GCM encryption with Argon2id key derivation</li>
+        <li><strong>Password Generator</strong> — Cryptographically secure, configurable strength and character sets</li>
+        <li><strong>MFA & SSO</strong> — Multi-factor authentication for vault access, SSO integration</li>
+        <li><strong>Credential Sharing</strong> — Share entries with end-to-end encryption</li>
+        <li><strong>Audit Log</strong> — Tracks entry creation, access, and changes</li>
+        <li><strong>Breach-Aware</strong> — Links safe entries to known breaches via Vigilar integration</li>
+        <li><strong>Browser Extension</strong> — Autofill from your vault without exposing the safe</li>
+      </ul>
+
+      <h2>Vigilar Integration</h2>
+      <p>
+        ARCZT and Vigilar are separate apps connected by a deep-link bridge. When Vigilar
+        detects a breach, it sends only breach metadata (domain, breach name, date, severity)
+        to ARCZT — never any credentials. ARCZT then shows you which entries in your safe
+        are linked to that breach.
+      </p>
+      <p>
+        No credentials flow between the two apps. The connection is metadata-only.
+      </p>
+
+      <h2>Security Model</h2>
+      <ul>
+        <li><strong>Encryption:</strong> AES-256-GCM (authenticated encryption)</li>
+        <li><strong>Key derivation:</strong> Argon2id (memory-hard, side-channel resistant)</li>
+        <li><strong>Quantum resistance:</strong> Symmetric AES-256 is quantum-resistant (Grover's algorithm reduces to 128-bit security)</li>
+        <li><strong>Master password:</strong> Never stored, never transmitted. Used only to derive the encryption key.</li>
+        <li><strong>Auto-lock:</strong> Configurable timeout, biometric re-unlock (Face ID, fingerprint)</li>
+        <li><strong>Zero network:</strong> No telemetry, no sync, no cloud. The safe is local only.</li>
+      </ul>
+
+      <h2>Technical Specs</h2>
+      <ul>
+        <li><strong>Backend:</strong> Python (FastAPI), PostgreSQL, Redis</li>
+        <li><strong>Frontend:</strong> Next.js + TypeScript</li>
+        <li><strong>Mobile:</strong> Android (Kotlin), iOS (Swift)</li>
+        <li><strong>Deployment:</strong> Docker Compose (self-hosted) or standalone desktop app</li>
+        <li><strong>Database:</strong> <code>arczt_vault</code> — encrypted at rest</li>
+      </ul>
+
+      <h2>Get ARCZT Vault</h2>
+      <p>
+        ARCZT Personal Vault is in development. Source code is on GitHub.
+      </p>
+      <p>
+        <a href="https://github.com/SEC-APAC-MB/ARCZT-Personal-Vault">View source on GitHub →</a>
+      </p>
+    </main>
+  </div>
+</body>
+</html>
