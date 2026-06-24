@@ -22,12 +22,12 @@
     <aside class="docs-sidebar">
       <h3>Vigilar</h3>
       <a href="/products/vigilar" class="active">Overview</a>
-      <a href="/docs/vigilar/features">Features</a>
-      <a href="/docs/vigilar/security">Security Model</a>
-      <a href="/docs/vigilar/install">Installation</a>
-      <a href="/docs/vigilar/pricing">Pricing</a>
-      <a href="/docs/vigilar/arczt-link">ARCZT Integration</a>
-      <a href="/docs/vigilar/faq">FAQ</a>
+      <a href="/products/vigilar/#key-features">Features</a>
+      <a href="/products/vigilar/#how-it-works">Security Model</a>
+      <a href="/products/vigilar/#technical-specs">Technical Specs</a>
+      <a href="/products/vigilar/#screenshots">Screenshots</a>
+      <a href="/products/vigilar/#vigilar-integration">ARCZT Integration</a>
+      <a href="/products/vigilar/#get-vigilar">Get Vigilar</a>
       <h3>Other Products</h3>
       <a href="/products/arczt-vault">ARCZT Vault</a>
     </aside>
@@ -36,6 +36,10 @@
       <span class="product-badge badge-vigilar">🔥 Vigilar</span>
       <h1>Vigilar</h1>
       <p class="lead">A security companion that runs entirely on your device. No cloud, no account, no data collection.</p>
+
+      <div class="screenshot-hero">
+        <img src="/assets/screenshots/vigilar/home.png" alt="Vigilar home screen — security dashboard on macOS">
+      </div>
 
       <h2>What is Vigilar?</h2>
       <p>
@@ -50,7 +54,7 @@
         Breach checks use k-anonymity hashing so your email is never transmitted in full.
       </div>
 
-      <h2>Key Features</h2>
+      <h2 id="key-features">Key Features</h2>
       <ul>
         <li><strong>Security Dashboard</strong> — Gatekeeper, SIP, FileVault, Firewall, XProtect status at a glance</li>
         <li><strong>Breach Monitor</strong> — Checks your email against known breach databases (HIBP API)</li>
@@ -68,7 +72,7 @@
         <li><strong>iOS</strong> — Planned (same codebase, App Store submission pending)</li>
       </ul>
 
-      <h2>How It Works</h2>
+      <h2 id="how-it-works">How It Works</h2>
       <p>
         Vigilar runs a custom-trained 12B parameter language model directly on your device.
         The model (Ember Prime) is quantized to 4-bit (7.4GB) and loads into RAM at startup.
@@ -81,7 +85,7 @@
         Your full email address never leaves your device.
       </p>
 
-      <h2>Technical Specs</h2>
+      <h2 id="technical-specs">Technical Specs</h2>
       <ul>
         <li><strong>Model:</strong> Ember Prime v8c, 12B parameters, Q4_K_M quantization (7.4GB)</li>
         <li><strong>Inference:</strong> llama.cpp (desktop), MLC (mobile)</li>
@@ -91,7 +95,31 @@
         <li><strong>Min OS:</strong> macOS 12+, Android 8+ (API 26)</li>
       </ul>
 
-      <h2>Get Vigilar</h2>
+      <h2 id="screenshots">Screenshots</h2>
+      <div class="screenshot-gallery">
+        <div class="screenshot">
+          <img src="/assets/screenshots/vigilar/chat.png" alt="AI companion chat">
+          <div class="screenshot-caption">AI Companion Chat — on-device 12B model</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/vigilar/security-dashboard.png" alt="Security dashboard">
+          <div class="screenshot-caption">Security Dashboard — Gatekeeper, SIP, Firewall status</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/vigilar/breach-monitor.png" alt="Breach monitor">
+          <div class="screenshot-caption">Breach Monitor — HIBP integration with ARCZT Vault link</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/vigilar/system-monitor.png" alt="System monitor">
+          <div class="screenshot-caption">System Monitor — real-time process and resource tracking</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/vigilar/settings.png" alt="Settings">
+          <div class="screenshot-caption">Settings — license management and preferences</div>
+        </div>
+      </div>
+
+      <h2 id="get-vigilar">Get Vigilar</h2>
       <p>
         Vigilar is currently in pre-release. Direct APK and DMG installs are available.
         Google Play and App Store listings are pending.

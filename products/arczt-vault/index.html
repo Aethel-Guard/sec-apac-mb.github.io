@@ -22,11 +22,12 @@
     <aside class="docs-sidebar">
       <h3>ARCZT Vault</h3>
       <a href="/products/arczt-vault" class="active">Overview</a>
-      <a href="/docs/arczt-vault/features">Features</a>
-      <a href="/docs/arczt-vault/security">Security Model</a>
-      <a href="/docs/arczt-vault/install">Installation</a>
-      <a href="/docs/arczt-vault/vigilar-link">Vigilar Integration</a>
-      <a href="/docs/arczt-vault/faq">FAQ</a>
+      <a href="/products/arczt-vault/#key-features">Features</a>
+      <a href="/products/arczt-vault/#security-model">Security Model</a>
+      <a href="/products/arczt-vault/#technical-specs">Technical Specs</a>
+      <a href="/products/arczt-vault/#screenshots">Screenshots</a>
+      <a href="/products/arczt-vault/#vigilar-integration">Vigilar Integration</a>
+      <a href="/products/arczt-vault/#get-arczt-vault">Get ARCZT</a>
       <h3>Other Products</h3>
       <a href="/products/vigilar">Vigilar</a>
     </aside>
@@ -35,6 +36,10 @@
       <span class="product-badge badge-arczt">🔑 ARCZT</span>
       <h1>ARCZT Personal Vault</h1>
       <p class="lead">Zero-knowledge, quantum-resistant credential management. Your safe never leaves your device.</p>
+
+      <div class="screenshot-hero">
+        <img src="/assets/screenshots/arczt-vault/landing.png" alt="ARCZT Personal Vault — landing page">
+      </div>
 
       <h2>What is ARCZT?</h2>
       <p>
@@ -49,7 +54,7 @@
         decrypt your data — we don't have your key and we don't want it.
       </div>
 
-      <h2>Key Features</h2>
+      <h2 id="key-features">Key Features</h2>
       <ul>
         <li><strong>Encrypted Safe</strong> — AES-256-GCM encryption with Argon2id key derivation</li>
         <li><strong>Password Generator</strong> — Cryptographically secure, configurable strength and character sets</li>
@@ -60,7 +65,7 @@
         <li><strong>Browser Extension</strong> — Autofill from your vault without exposing the safe</li>
       </ul>
 
-      <h2>Vigilar Integration</h2>
+      <h2 id="vigilar-integration">Vigilar Integration</h2>
       <p>
         ARCZT and Vigilar are separate apps connected by a deep-link bridge. When Vigilar
         detects a breach, it sends only breach metadata (domain, breach name, date, severity)
@@ -71,7 +76,7 @@
         No credentials flow between the two apps. The connection is metadata-only.
       </p>
 
-      <h2>Security Model</h2>
+      <h2 id="security-model">Security Model</h2>
       <ul>
         <li><strong>Encryption:</strong> AES-256-GCM (authenticated encryption)</li>
         <li><strong>Key derivation:</strong> Argon2id (memory-hard, side-channel resistant)</li>
@@ -81,7 +86,7 @@
         <li><strong>Zero network:</strong> No telemetry, no sync, no cloud. The safe is local only.</li>
       </ul>
 
-      <h2>Technical Specs</h2>
+      <h2 id="technical-specs">Technical Specs</h2>
       <ul>
         <li><strong>Backend:</strong> Python (FastAPI), PostgreSQL, Redis</li>
         <li><strong>Frontend:</strong> Next.js + TypeScript</li>
@@ -90,7 +95,31 @@
         <li><strong>Database:</strong> <code>arczt_vault</code> — encrypted at rest</li>
       </ul>
 
-      <h2>Get ARCZT Vault</h2>
+      <h2 id="screenshots">Screenshots</h2>
+      <div class="screenshot-gallery">
+        <div class="screenshot">
+          <img src="/assets/screenshots/arczt-vault/vault.png" alt="Vault view">
+          <div class="screenshot-caption">Encrypted Vault — your safe entries</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/arczt-vault/generator.png" alt="Password generator">
+          <div class="screenshot-caption">Password Generator — cryptographically secure</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/arczt-vault/mfa.png" alt="MFA screen">
+          <div class="screenshot-caption">Multi-Factor Authentication</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/arczt-vault/final-vault.png" alt="Vault main view">
+          <div class="screenshot-caption">Vault Main View — entry management</div>
+        </div>
+        <div class="screenshot">
+          <img src="/assets/screenshots/arczt-vault/extension-popup.png" alt="Browser extension">
+          <div class="screenshot-caption">Browser Extension — autofill from vault</div>
+        </div>
+      </div>
+
+      <h2 id="get-arczt-vault">Get ARCZT Vault</h2>
       <p>
         ARCZT Personal Vault is in development. Source code is on GitHub.
       </p>
