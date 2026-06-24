@@ -1,3 +1,17 @@
+# GitHub Pages configuration for SEC-APAC-MB
 theme: jekyll-theme-midnight
 url: https://sec-apac-mb.github.io
 baseurl: ""
+permalink: pretty
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - _config.yml
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

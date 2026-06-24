@@ -1,29 +1,59 @@
 # SEC-APAC-MB Product Documentation
 
-Static docs site for SEC-APAC-MB products.
+Static docs site for SEC-APAC-MB cybersecurity products.
+
+## Products
+
+- **Vigilar** — On-device security companion (macOS, Android). Real-time threat monitoring, AI chat, breach alerts.
+- **ARCZT Personal Vault** — Zero-knowledge, quantum-resistant credential manager.
 
 ## Structure
 
 ```
-├── index.html              ← Landing page (company overview + product cards)
+├── index.html              ← Landing page (company overview + product cards + interest form)
+├── _config.yml             ← Jekyll/GitHub Pages config
 ├── assets/
 │   ├── styles.css          ← All styling (dark theme, responsive)
+│   ├── form.css            ← Interest form styles
 │   └── favicon.svg         ← Shield + flame logo
+├── about/
+│   └── index.html          ← About page
+├── products/
+│   ├── index.html           ← Products overview
+│   ├── vigilar/index.html   ← Vigilar product page
+│   └── arczt-vault/index.html ← ARCZT Vault product page
 ├── docs/
+│   ├── index.html           ← Docs landing (links to all sub-pages)
 │   ├── vigilar/
-│   │   └── index.html      ← Vigilar product docs
-│   ├── arczt-vault/
-│   │   └── index.html      ← ARCZT Vault product docs
-│   └── ember-core/
-│       └── index.html      ← Ember Core internal docs
+│   │   ├── features/index.html
+│   │   ├── security/index.html
+│   │   ├── install/index.html
+│   │   ├── pricing/index.html
+│   │   └── faq/index.html
+│   └── arczt-vault/
+│       ├── features/index.html
+│       ├── security/index.html
+│       ├── install/index.html
+│       ├── pricing/index.html
+│       └── faq/index.html
 └── README.md
 ```
 
+## GitHub Repos
+
+- **Org**: https://github.com/SEC-APAC-MB
+- **This site**: https://github.com/SEC-APAC-MB/sec-apac-mb.github.io
+- **Vigilar app**: https://github.com/SEC-APAC-MB/vigilar-app
+- **ARCZT Vault**: Source coming soon — see org page for updates
+
 ## Deploy
 
-This is a static site. Push to `SEC-APAC-MB/sec-apac-mb.github.io` repo and enable GitHub Pages.
+This is a static site hosted on GitHub Pages. Push to the `main` branch of
+`SEC-APAC-MB/sec-apac-mb.github.io` and GitHub Pages auto-deploys.
 
-## Add More Docs Pages
+## Conventions
 
-Each product has a sidebar with links to sub-pages (features, security, install, etc).
-Create those pages as needed — they all use the same `assets/styles.css` and docs layout.
+- All pages include: canonical URL, nav with "Request Test Build" CTA, consistent footer
+- Docs pages include: "View source on GitHub" and "Edit this page on GitHub" links at bottom
+- Sidebar links use no trailing slashes (e.g., `/docs/vigilar/features` not `/docs/vigilar/features/`)
+- ARCZT Vault GitHub links point to org page (repo doesn't exist yet)
